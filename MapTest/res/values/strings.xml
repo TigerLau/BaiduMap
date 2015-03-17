@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MyMap</string>
+    <string name="app_name">MapTest</string>
     <string name="action_settings">Settings</string>
     <string name="search_hint">搜地点、查公交、找路线</string>
     <string name="common_search_hint">搜索</string>

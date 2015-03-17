@@ -1,10 +1,13 @@
 package com.tigerlau.maptest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BaiduMapOptions;
+import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.SupportMapFragment;
 import com.baidu.mapapi.model.LatLng;
@@ -18,6 +21,9 @@ public class LauncherActivity extends FragmentActivity {
 
 	private double mLatitude;
 	private double mLongitude;
+	private float mZoom;
+	private float mRotate;
+	private float mOverlook;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +53,14 @@ public class LauncherActivity extends FragmentActivity {
 		super.onSaveInstanceState(outState);
 		mLatitude = mBaiduMap.getMapStatus().target.latitude;
 		mLongitude = mBaiduMap.getMapStatus().target.longitude;
+		mZoom = mBaiduMap.getMapStatus().zoom;
+		mRotate = mBaiduMap.getMapStatus().rotate;
+		mOverlook = mBaiduMap.getMapStatus().overlook;
 		outState.putDouble("Latitude", mLatitude);
 		outState.putDouble("Longitude", mLongitude);
+		outState.putFloat("Zoom", mZoom);
+		outState.putFloat("Rotate", mRotate);
+		outState.putFloat("Overlook", mOverlook);
 	}
 
 	@Override
@@ -56,7 +68,18 @@ public class LauncherActivity extends FragmentActivity {
 		super.onRestoreInstanceState(savedInstanceState);
 		mLatitude = savedInstanceState.getDouble("Latitude");
 		mLongitude = savedInstanceState.getDouble("Longitude");
-		mBaiduMap.setMapStatus(MapStatusUpdateFactory.newLatLng(new LatLng(
-				mLatitude, mLongitude)));
+		mZoom = savedInstanceState.getFloat("Zoom");
+		mRotate = savedInstanceState.getFloat("Rotate");
+		mOverlook = savedInstanceState.getFloat("Overlook");
+		mBaiduMap.setMapStatus(MapStatusUpdateFactory
+				.newMapStatus(new MapStatus.Builder().overlook(mOverlook)
+						.rotate(mRotate).zoom(mZoom)
+						.target(new LatLng(mLatitude, mLongitude)).build()));
+	}
+
+	public void clickToSearch(View view) {
+		final Intent intent = new Intent(LauncherActivity.this,
+				CommonSearchActivity.class);
+		startActivity(intent);
 	}
 }
