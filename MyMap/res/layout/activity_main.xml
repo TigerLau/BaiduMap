@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/bmapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/common_searchbox_home" />
+
+    <com.tigerlau.baidumap.ui.ZoomControlView
+        android:id="@+id/zoomcontrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp" >
+    </com.tigerlau.baidumap.ui.ZoomControlView>
+
+    <ImageButton
+        android:id="@+id/locatebtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/main_locatebutton"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_icon_follow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/main_bottombar_background"
+        android:divider="@drawable/vertial_divider_line"
+        android:dividerPadding="15dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:visibility="visible" >
+
+        <com.tigerlau.baidumap.ui.DrawableButton
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_bl_button_background"
+            android:clickable="true"
+            android:drawableLeft="@drawable/main_icon_nearby"
+            android:drawableStart="@drawable/main_icon_nearby"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/nearby"
+            android:textSize="16sp" />
+
+        <com.tigerlau.baidumap.ui.DrawableButton
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_bm_button_background"
+            android:clickable="true"
+            android:drawableLeft="@drawable/main_icon_route"
+            android:drawableStart="@drawable/main_icon_route"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/route"
+            android:textSize="16sp" />
+
+        <com.tigerlau.baidumap.ui.DrawableButton
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_bm_button_background"
+            android:clickable="true"
+            android:drawableLeft="@drawable/main_icon_nav"
+            android:drawableStart="@drawable/main_icon_nav"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/nav"
+            android:textSize="16sp" />
+
+        <com.tigerlau.baidumap.ui.DrawableButton
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_br_button_background"
+            android:clickable="true"
+            android:drawableLeft="@drawable/main_icon_mine"
+            android:drawableStart="@drawable/main_icon_mine"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/mine"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>
