@@ -7,8 +7,8 @@
         android:id="@+id/bmapview_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    
-    <include layout="@layout/common_searchbox_home"/>
+
+    <include layout="@layout/common_searchbox_home" />
 
     <include layout="@layout/common_navigation_home2" />
 
