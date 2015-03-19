@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignWithParentIfMissing="true" >
+
+    <ImageButton
+        android:id="@+id/zoomin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:src="@drawable/zoomin_seletor" />
+
+    <ImageButton
+        android:id="@+id/zoomout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/zoomin"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:src="@drawable/zoomout_seletor" />
+
+</RelativeLayout>

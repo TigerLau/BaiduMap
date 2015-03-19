@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/main_bottombar_background"
+    android:divider="@drawable/distance_line"
+    android:dividerPadding="16dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    android:visibility="visible" >
+
+    <com.tigerlau.maptest.ui.IconButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/main_bl_button_background"
+        android:clickable="true"
+        android:drawableLeft="@drawable/main_icon_nearby"
+        android:drawableStart="@drawable/main_icon_nearby"
+        android:text="@string/nearby"
+        android:textSize="16sp" />
+
+    <com.tigerlau.maptest.ui.IconButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/main_bm_button_background"
+        android:clickable="true"
+        android:drawableLeft="@drawable/main_icon_route"
+        android:drawableStart="@drawable/main_icon_route"
+        android:text="@string/route"
+        android:textSize="16sp" />
+
+    <com.tigerlau.maptest.ui.IconButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/main_bm_button_background"
+        android:clickable="true"
+        android:drawableLeft="@drawable/main_icon_nav"
+        android:drawableStart="@drawable/main_icon_nav"
+        android:text="@string/nav"
+        android:textSize="16sp" />
+
+    <com.tigerlau.maptest.ui.IconButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/main_br_button_background"
+        android:clickable="true"
+        android:drawableLeft="@drawable/main_icon_mine"
+        android:drawableStart="@drawable/main_icon_mine"
+        android:text="@string/mine"
+        android:textSize="16sp" />
+
+</LinearLayout>

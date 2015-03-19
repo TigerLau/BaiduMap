@@ -8,8 +8,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <include layout="@layout/common_searchbox_home" />
+    <include
+        android:id="@+id/common_searchbox_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        layout="@layout/common_searchbox_home" />
 
-    <include layout="@layout/common_navigation_home2" />
+    <include
+        android:id="@+id/common_navigation_home2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        layout="@layout/common_navigation_home2" />
+
+    <com.tigerlau.maptest.ui.ZoomControlView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/common_navigation_home2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="5dp"
+        />
 
 </RelativeLayout>

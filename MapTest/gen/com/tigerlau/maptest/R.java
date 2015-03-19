@@ -62,12 +62,14 @@ containing a value of this type.
     public static final class id {
         public static final int back_btn=0x7f060000;
         public static final int bmapview_container=0x7f060003;
+        public static final int common_navigation_home2=0x7f060005;
         public static final int common_search_edit=0x7f060002;
+        public static final int common_searchbox_home=0x7f060004;
         public static final int common_speak_btn=0x7f060001;
-        public static final int searchedit=0x7f060005;
-        public static final int speak_btn=0x7f060004;
-        public static final int zoomin=0x7f060006;
-        public static final int zoomout=0x7f060007;
+        public static final int searchedit=0x7f060007;
+        public static final int speak_btn=0x7f060006;
+        public static final int zoomin=0x7f060008;
+        public static final int zoomout=0x7f060009;
     }
     public static final class layout {
         public static final int activity_common_search=0x7f030000;
