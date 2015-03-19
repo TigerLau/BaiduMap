@@ -38,26 +38,29 @@ containing a value of this type.
         public static final int main_bottombtn_up=0x7f02000e;
         public static final int main_br_button_background=0x7f02000f;
         public static final int main_br_button_down=0x7f020010;
-        public static final int main_icon_mine=0x7f020011;
-        public static final int main_icon_nav=0x7f020012;
-        public static final int main_icon_nearby=0x7f020013;
-        public static final int main_icon_route=0x7f020014;
-        public static final int main_icon_searchbox=0x7f020015;
-        public static final int main_icon_voice=0x7f020016;
-        public static final int main_icon_zoomin=0x7f020017;
-        public static final int main_icon_zoomin_dis=0x7f020018;
-        public static final int main_icon_zoomout=0x7f020019;
-        public static final int main_icon_zoomout_dis=0x7f02001a;
-        public static final int main_locatebtn_down=0x7f02001b;
-        public static final int main_locatebtn_up=0x7f02001c;
-        public static final int main_locatebutton=0x7f02001d;
-        public static final int main_searchbox_voice_selector=0x7f02001e;
-        public static final int main_topbtn_down=0x7f02001f;
-        public static final int main_topbtn_up=0x7f020020;
-        public static final int search_box=0x7f020021;
-        public static final int vertial_divider_line=0x7f020022;
-        public static final int zoomin_seletor=0x7f020023;
-        public static final int zoomout_seletor=0x7f020024;
+        public static final int main_icon_compass=0x7f020011;
+        public static final int main_icon_follow=0x7f020012;
+        public static final int main_icon_location=0x7f020013;
+        public static final int main_icon_mine=0x7f020014;
+        public static final int main_icon_nav=0x7f020015;
+        public static final int main_icon_nearby=0x7f020016;
+        public static final int main_icon_route=0x7f020017;
+        public static final int main_icon_searchbox=0x7f020018;
+        public static final int main_icon_voice=0x7f020019;
+        public static final int main_icon_zoomin=0x7f02001a;
+        public static final int main_icon_zoomin_dis=0x7f02001b;
+        public static final int main_icon_zoomout=0x7f02001c;
+        public static final int main_icon_zoomout_dis=0x7f02001d;
+        public static final int main_locatebtn_down=0x7f02001e;
+        public static final int main_locatebtn_up=0x7f02001f;
+        public static final int main_locatebutton=0x7f020020;
+        public static final int main_searchbox_voice_selector=0x7f020021;
+        public static final int main_topbtn_down=0x7f020022;
+        public static final int main_topbtn_up=0x7f020023;
+        public static final int search_box=0x7f020024;
+        public static final int vertial_divider_line=0x7f020025;
+        public static final int zoomin_seletor=0x7f020026;
+        public static final int zoomout_seletor=0x7f020027;
     }
     public static final class id {
         public static final int back_btn=0x7f060000;
@@ -66,10 +69,12 @@ containing a value of this type.
         public static final int common_search_edit=0x7f060002;
         public static final int common_searchbox_home=0x7f060004;
         public static final int common_speak_btn=0x7f060001;
-        public static final int searchedit=0x7f060007;
-        public static final int speak_btn=0x7f060006;
-        public static final int zoomin=0x7f060008;
-        public static final int zoomout=0x7f060009;
+        public static final int locatebtn=0x7f060007;
+        public static final int searchedit=0x7f060009;
+        public static final int speak_btn=0x7f060008;
+        public static final int zoomcontol=0x7f060006;
+        public static final int zoomin=0x7f06000a;
+        public static final int zoomout=0x7f06000b;
     }
     public static final class layout {
         public static final int activity_common_search=0x7f030000;

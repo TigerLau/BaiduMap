@@ -43,6 +43,16 @@
         </activity>
         <activity android:name=".CommonSearchActivity" >
         </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

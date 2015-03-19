@@ -29,12 +29,29 @@
         layout="@layout/common_navigation_home2" />
 
     <com.tigerlau.maptest.ui.ZoomControlView
+        android:id="@+id/zoomcontol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/common_navigation_home2"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="7dp"
         android:layout_marginBottom="5dp"
-        />
+        android:layout_marginRight="7dp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/locatebtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_above="@id/common_navigation_home2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/main_locatebutton"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_icon_follow"
+        android:visibility="gone" />
 
 </RelativeLayout>
