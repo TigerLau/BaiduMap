@@ -59,9 +59,6 @@ public class DrawableButton extends TextView {
 		invalidate();
 	}
 
-	/**
-	 * »ñÈ¡TextViewÄÚÈÝ
-	 */
 	public String getText() {
 		return text;
 	}
@@ -77,11 +74,11 @@ public class DrawableButton extends TextView {
 				final int viewHeight = getHeight();
 				final int drawablePadding = getCompoundDrawablePadding();
 				final int start = (getWidth() - (bitmapWidth + drawablePadding + textWidth)) >> 1;
-				// »æÖÆÖÐ¼ä×ó±ßÍ¼Æ¬
+				// ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
 				canvas.drawBitmap(getBitmapFromDrawable(drawableLeft), start,
 						(viewHeight >> 1) - (bitmapHeight >> 1), getPaint());
 
-				// »æÖÆÖÐ¼äÓÒ±ßÎÄ×Ö
+				// ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½Ò±ï¿½ï¿½ï¿½ï¿½ï¿½
 				canvas.drawText(text, start + drawablePadding + bitmapWidth,
 						(viewHeight >> 1) + (textHeight >> 1), getPaint());
 			}
@@ -91,7 +88,6 @@ public class DrawableButton extends TextView {
 	}
 
 	/**
-	 * ¸ù¾ÝDrawable·µ»ØBitmap
 	 * 
 	 * @param drawable
 	 * @return

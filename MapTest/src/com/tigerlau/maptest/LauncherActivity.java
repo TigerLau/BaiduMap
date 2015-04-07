@@ -32,12 +32,9 @@ import com.tigerlau.maptest.ui.ZoomControlView;
 
 public class LauncherActivity extends FragmentActivity {
 
-	// 定位更新标志
 	private final static int FLAG_UPDATE_LOCATION = 1;
-	// 方向更新标志
 	private final static int FALG_UPDATE_DIRECTION = 2;
 
-	// 默认地图中心点为北京故宫
 	private static final LatLng DEFAULT_LATLNG = new LatLng(39.914884,
 			116.403883);
 	private final static int[] mLocateDrawable = {
@@ -67,7 +64,6 @@ public class LauncherActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_launcher);
 
-		// 初始化或再初始化地图
 		if (savedInstanceState != null) {
 			mLatitude = savedInstanceState.getDouble("Latitude");
 			mLongitude = savedInstanceState.getDouble("Longitude");
@@ -107,7 +103,6 @@ public class LauncherActivity extends FragmentActivity {
 		mZoomControl = (ZoomControlView) findViewById(R.id.zoomcontol);
 		mLocateBtn = (ImageButton) findViewById(R.id.locatebtn);
 		mLocateBtn.setOnClickListener(onLocateBtnClickListener);
-		// 初始化定位服务
 		initLocation();
 	}
 
@@ -122,7 +117,7 @@ public class LauncherActivity extends FragmentActivity {
 				if (isFirstIn) {
 					mLocateBtn.setVisibility(View.VISIBLE);
 					mZoomControl.setVisibility(View.VISIBLE);
-					// 首次地图加载完成后，开启定位服务
+					
 					mBaiduMap.setMyLocationEnabled(true);
 					if (!mLocationClient.isStarted()) {
 						mLocationClient.start();
@@ -166,7 +161,7 @@ public class LauncherActivity extends FragmentActivity {
 	@Override
 	protected void onStop() {
 		super.onStop();
-		// 停止定位
+		
 		mBaiduMap.setMyLocationEnabled(false);
 		mLocationClient.stop();
 	}
@@ -191,7 +186,7 @@ public class LauncherActivity extends FragmentActivity {
 	@Override
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
-		// 可选择在OnCreate中实现Re-initialized
+		
 		// mLatitude = savedInstanceState.getDouble("Latitude");
 		// mLongitude = savedInstanceState.getDouble("Longitude");
 		// mZoom = savedInstanceState.getFloat("Zoom");
@@ -218,7 +213,6 @@ public class LauncherActivity extends FragmentActivity {
 	}
 
 	/**
-	 * 根据当前LocationMode更新UI和定位模式设置
 	 * 
 	 * @param mLocationMode
 	 */
@@ -292,12 +286,10 @@ public class LauncherActivity extends FragmentActivity {
 
 		@Override
 		public void onReceiveLocation(BDLocation location) {
-			// 更新定位信息
 			mLatitude = location.getLatitude();
 			mLongitude = location.getLongitude();
 			mAccuracy = location.getRadius();
 
-			// 发送位置显示更新请求
 			mHandler.sendEmptyMessage(FLAG_UPDATE_LOCATION);
 
 			if (isFirstIn) {

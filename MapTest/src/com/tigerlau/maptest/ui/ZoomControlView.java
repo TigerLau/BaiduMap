@@ -15,10 +15,10 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.tigerlau.maptest.R;
 
 public class ZoomControlView extends RelativeLayout implements OnClickListener {
-	// UI元素
+	
 	private ImageButton mButtonZoomin;
 	private ImageButton mButtonZoomout;
-	// 操作相关
+	
 	private BaiduMap daiduMap;
 	private static MapStatusUpdate msu;
 	private float maxZoomLevel;
@@ -68,22 +68,22 @@ public class ZoomControlView extends RelativeLayout implements OnClickListener {
 	}
 
 	/**
-	 * 与MapView设置关联
+	 * 
 	 * 
 	 * @param mapView
 	 */
 	public void setBaiduMap(BaiduMap baiduMap) {
 		this.daiduMap = baiduMap;
 
-		// 获取最大的缩放级别
+		// 锟斤拷取锟斤拷锟斤拷锟斤拷锟脚硷拷锟斤拷
 		maxZoomLevel = daiduMap.getMaxZoomLevel();
-		// 获取最大的缩放级别
+		// 锟斤拷取锟斤拷锟斤拷锟斤拷锟脚硷拷锟斤拷
 		minZoomLevel = daiduMap.getMinZoomLevel();
 	}
 
 	/**
-	 * 根据MapView的缩放级别更新缩放按钮的状态，当达到最大缩放级别，设置mButtonZoomin
-	 * 为不能点击，反之设置mButtonZoomout
+	 * 
+	 * 
 	 * 
 	 * @param level
 	 */
